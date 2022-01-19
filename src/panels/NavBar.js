@@ -3,7 +3,13 @@ import React from 'react';
 const Navbar = () => {
   return (
     <nav>
-      <div className="title">Spacestegram</div>
+      <span className="title">Spacestegram</span>
+      <div className="menu flex">
+      <i className="fas fa-home"></i>
+      <i className="far fa-heart"></i>
+      
+
+      </div>
 
     </nav>
   );

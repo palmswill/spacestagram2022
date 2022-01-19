@@ -17,7 +17,7 @@ const Mainsidebar = () => {
   ];
   return (
     <>
-      <h3>Your Likes</h3>
+      <h3>What You Liked</h3>
       <div className="side-card-container">
         {cards.map((card) => {
           const { date, url } = card;

@@ -19,19 +19,7 @@ body {
 
 .flex {
   display: flex;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
-}
-
-/* navbar */
-nav {
-  padding: 30px 10%;
-  position: fixed;
-  top: 0;
-  background-color: var(--secondary-background);
-  width: 100%;
-  border: 1px solid rgb(230, 230, 230);
-  margin-bottom: 20px;
 }
 
 main {
@@ -39,6 +27,47 @@ main {
   margin: 15vh auto;
   min-height: inherit;
   max-width: 1050px;
+}
+
+/* navbar */
+nav {
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  position: fixed;
+  top: 0;
+
+  background-color: var(--secondary-background);
+  width: 100vw;
+  border: 1px solid rgb(230, 230, 230);
+  margin-bottom: 20px;
+}
+
+nav .title {
+  font-size: clamp(1rem, 1vw + 1rem, 3rem) !important;
+  font-family: "Courgette", cursive !important;
+  width:200px;
+  
+}
+
+nav .menu{
+  float:right;
+  margin-top:5px;
+  margin-right:80px;
+  font-size:25px;
+  color:grey;
+  
+
+}
+nav .menu>*{
+  margin:5px;
+
+}
+
+nav .menu>:hover{
+ cursor:pointer;
+ color:black;
+
 }
 
 /* homePage */
@@ -61,18 +90,18 @@ main {
   border: 1px solid rgb(230, 230, 230);
 }
 
-.sidebar h3{
-  padding:0px 10px;
+.sidebar h3 {
+  padding: 0px 10px;
 }
-.side-card-container{
-  display:flex;
-  flex-wrap:wrap;
-  width:100%;
+.side-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .side-card {
   padding: 16px;
-  min-width:100px;
+  min-width: 100px;
   font-weight: 700;
   color: #262626;
   display: flex;
