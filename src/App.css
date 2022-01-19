@@ -2,6 +2,7 @@
 
 :root {
   --main-background: #fafafa;
+  --secondary-background: #fff;
 }
 #root,
 .App {
@@ -15,26 +16,82 @@ body {
   min-height: 100vh;
   background-color: var(--main-background) !important;
 }
+
+.flex {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
 /* navbar */
-nav{
-  padding:30px 10% ;
-  position:fixed;
-  top:0;
-  background-color: #fff;
+nav {
+  padding: 30px 10%;
+  position: fixed;
+  top: 0;
+  background-color: var(--secondary-background);
   width: 100%;
   border: 1px solid rgb(230, 230, 230);
   margin-bottom: 20px;
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: 15vh auto;
   min-height: inherit;
+  max-width: 1050px;
+}
+
+/* homePage */
+.home-page .main-card-container {
+  max-width: 700px;
+}
+
+.home-page {
+  gap: 20px;
+}
+
+.home-page > * {
+  flex-grow: 1;
+  margin: 0 auto;
+}
+.home-page .sidebar {
+  background-color: var(--secondary-background);
+  min-width: 150px;
+  max-width: 700px;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.sidebar h3{
+  padding:0px 10px;
+}
+.side-card-container{
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
+}
+
+.side-card {
+  padding: 16px;
+  min-width:100px;
+  font-weight: 700;
+  color: #262626;
+  display: flex;
+  align-items: center;
+}
+.side-card p {
+  padding-left: 12px;
+}
+
+.side-card img {
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
 }
 
 /* main-cards */
 .main-card {
-  background-color: #fff;
+  background-color: var(--secondary-background);
   width: 100%;
   border: 1px solid rgb(230, 230, 230);
   margin-bottom: 20px;
@@ -58,15 +115,11 @@ main {
   border-radius: 30px;
 }
 
-.main-card .username .extra{
-  margin-left:auto ;
-
-
+.main-card .username .extra {
+  margin-left: auto;
 }
-.main-card .username .extra:hover{
-  cursor:pointer;
-  
-
+.main-card .username .extra:hover {
+  cursor: pointer;
 }
 
 .main-card .postImage {
@@ -78,14 +131,13 @@ main {
   padding: 16px;
 }
 
-.main-card .status .readmore{
-  color:darkgrey;
-  padding-left:5px;
+.main-card .status .readmore {
+  color: darkgrey;
+  padding-left: 5px;
 }
-.main-card .status .readmore:hover{
-  cursor:pointer;
+.main-card .status .readmore:hover {
+  cursor: pointer;
 }
-
 
 .main-card b {
   color: #262626;
@@ -108,17 +160,15 @@ main {
   width: calc(100% - 88px);
   height: 18px;
 }
-.main-card .commentInput .post-button{
-  color:#B3DFFC;
-
+.main-card .commentInput .post-button {
+  color: #b3dffc;
 }
 
 .main-card .commentInput textarea:focus {
-  outline:none !important;
-
+  outline: none !important;
 }
 
 .main-card .commentInput img {
-  width:32px;
+  width: 32px;
   padding: 9px 8px;
 }
