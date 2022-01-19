@@ -17,6 +17,10 @@ body {
   background-color: var(--main-background) !important;
 }
 
+a{
+  text-decoration:none;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -31,9 +35,9 @@ main {
 
 /* navbar */
 nav {
-  padding-top:10px;
-  padding-bottom:10px;
-  padding-left:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
   position: fixed;
   top: 0;
 
@@ -46,28 +50,23 @@ nav {
 nav .title {
   font-size: clamp(1rem, 1vw + 1rem, 3rem) !important;
   font-family: "Courgette", cursive !important;
-  width:200px;
-  
+  width: 200px;
 }
 
-nav .menu{
-  float:right;
-  margin-top:5px;
-  margin-right:80px;
-  font-size:25px;
-  color:grey;
-  
-
+nav .menu {
+  float: right;
+  margin-top: 5px;
+  margin-right: 80px;
+  font-size: 25px;
+  color: grey;
 }
-nav .menu>*{
-  margin:5px;
-
+nav .menu > * {
+  margin: 5px;
 }
 
-nav .menu>:hover{
- cursor:pointer;
- color:black;
-
+nav .menu > :hover {
+  cursor: pointer;
+  color: black;
 }
 
 /* homePage */
@@ -118,7 +117,7 @@ nav .menu>:hover{
   border-radius: 50px;
 }
 
-/* main-cards */
+/* main-cards ,show-page */
 .main-card {
   background-color: var(--secondary-background);
   width: 100%;
@@ -126,6 +125,7 @@ nav .menu>:hover{
   margin-bottom: 20px;
 }
 
+.show-page .username,
 .main-card .username {
   padding: 16px;
   font-weight: 700;
@@ -133,10 +133,12 @@ nav .menu>:hover{
   display: flex;
   align-items: center;
 }
+.show-page .username p,
 .main-card .username p {
   padding-left: 12px;
 }
 
+.show-page .username img,
 .main-card .username img {
   object-fit: cover;
   width: 30px;
@@ -144,44 +146,51 @@ nav .menu>:hover{
   border-radius: 30px;
 }
 
+.show-page .username .extra,
 .main-card .username .extra {
   margin-left: auto;
 }
+.show-page .username .extra:hover,
 .main-card .username .extra:hover {
   cursor: pointer;
 }
 
-.main-card .postImage {
+.postImage {
   width: 100%;
 }
 
+.show-page .status,
 .main-card .status {
   border-bottom: 1px solid #f2f2f2;
   padding: 16px;
 }
 
+.show-page .status .readmore,
 .main-card .status .readmore {
   color: darkgrey;
   padding-left: 5px;
 }
+.show-page .status .readmore:hover,
 .main-card .status .readmore:hover {
   cursor: pointer;
+  color:black;
 }
 
-.main-card b {
+ b {
   color: #262626;
 
   padding-right: 10px;
 }
-.main-card .date {
+ .date {
   margin-top: 5px;
   color: lightgray;
 }
-
+.show-page .commentInput,
 .main-card .commentInput {
   display: flex;
   align-items: center;
 }
+.show-page .commentInput textarea,
 .main-card .commentInput textarea {
   resize: none;
   border: none;
@@ -189,15 +198,41 @@ nav .menu>:hover{
   width: calc(100% - 88px);
   height: 18px;
 }
+.show-page .commentInput .post-button,
 .main-card .commentInput .post-button {
   color: #b3dffc;
 }
 
+.show-page .commentInput .post-button:hover,
+.main-card .commentInput .post-button:hover {
+  color: #11217e;
+  cursor:pointer;
+}
+.show-page .commentInput textarea:focus,
 .main-card .commentInput textarea:focus {
   outline: none !important;
 }
 
+
+
+.show-page .commentInput img
 .main-card .commentInput img {
   width: 32px;
   padding: 9px 8px;
+}
+
+.show-page > * {
+  background-color: var(--secondary-background);
+  min-height: 80vh;
+}
+
+.show-page .left {
+  flex-grow: 2;
+  max-width:500px; 
+}
+.show-page .right {
+  flex-grow: 1;
+  width:30vw;
+  min-width: 300px;
+  max-width:500px;
 }

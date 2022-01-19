@@ -10,7 +10,7 @@ const Maincard = ({ id, info, liked }) => {
     <div className="main-card" key={id} id={id}>
       <Username title={title} />
       <Media src={url} type={media_type} />
-      <Status explanation={explanation} copyright={copyright} date={date}/>
+      <Status explanation={explanation} simplified copyright={copyright} date={date}/>
       <Commentinput/>
     </div>
   );
