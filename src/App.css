@@ -17,6 +17,11 @@ body {
   background-color: var(--main-background) !important;
 }
 
+iframe{
+  width:100%;
+  min-height:300px;
+}
+
 a{
   text-decoration:none;
 }
@@ -64,7 +69,7 @@ nav .menu > * {
   margin: 5px;
 }
 
-nav .menu > :hover {
+nav .menu > :hover,nav .title:hover {
   cursor: pointer;
   color: black;
 }
@@ -76,6 +81,7 @@ nav .menu > :hover {
 
 .home-page {
   gap: 20px;
+  flex-direction: row;
 }
 
 .home-page > * {
@@ -240,4 +246,15 @@ nav .menu > :hover {
   width:30vw;
   min-width: 300px;
   max-width:500px;
+}
+
+.gallery-container{
+  gap:10px;
+}
+
+.gallery-container>*{
+  width:300px;
+  flex-grow:1;
+
+
 }

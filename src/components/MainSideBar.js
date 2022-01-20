@@ -1,20 +1,11 @@
 import React from "react";
+import storage from "../methods/storage";
+import { useNavigate } from "react-router-dom";
 
 const Mainsidebar = () => {
-  let cards = [
-    {
-      date: "2019-03-22",
-      url: "https://apod.nasa.gov/apod/image/0608/exp1Launch_msfc_c22.jpg",
-    },
-    {
-      date: "2019-03-22",
-      url: "https://apod.nasa.gov/apod/image/0608/exp1Launch_msfc_c22.jpg",
-    },
-    {
-      date: "2019-03-22",
-      url: "https://apod.nasa.gov/apod/image/0608/exp1Launch_msfc_c22.jpg",
-    },
-  ];
+  let cards = storage.getLikedList();
+  const navigate=useNavigate();
+
   return (
     <>
       <h3>What You Liked</h3>
@@ -22,7 +13,7 @@ const Mainsidebar = () => {
         {cards.map((card,index) => {
           const { date, url } = card;
           return (
-            <div className="side-card" key={date+index}>
+            <div onClick={()=>navigate(`/date/${date}`)} className="side-card" key={date+index}>
               <img src={`${url}`} alt={date} />
               <p>{date}</p>
             </div>

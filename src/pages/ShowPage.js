@@ -26,7 +26,7 @@ const Showpage = () => {
       </div>
       <div className="right">
         <Username title={title} />
-        <Status explanation={explanation} copyright={copyright} date={date} />
+        <Status explanation={explanation} copyright={copyright} date={date} url={url} type={media_type} />
         <Commentinput />
       </div>
     </div>

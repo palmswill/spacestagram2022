@@ -1,21 +1,31 @@
-import React,{useEffect,useState} from "react";
+import React,{useEffect,useState,useContext} from "react";
 import { Link } from "react-router-dom";
 import storage from "../../methods/storage";
+import { LikedContext } from "../../Routing";
 
-const Status = ({explanation, copyright, date,simplified}) => {
+const Status = ({explanation, copyright, date,simplified,url,type}) => {
+
+  const [likeTirgger,setLikeTrigger]=useContext(LikedContext);
+
+
+
+
   const shortenText =
     explanation.length > 150 ? `${explanation.slice(0, 150)} ...` : explanation;
     const [liked,setLiked]=useState(false);
 
     useEffect(() => {
       let likedList=storage.getLikedList();
-      setLiked(likedList.includes(date));
+      setLiked(likedList.filter(item=>item.date === date).length?true:false);
+      
 
     }, [date]);
 
     const handleLike=()=>{
-      liked?storage.removeLikedItem(date):storage.setLikedItem(date);
+      console.log(type);
+      liked?storage.removeLikedItem(date):storage.setLikedItem({date:date,url:url,type:type});
       setLiked(!liked);
+      setLikeTrigger(!likeTirgger);
     }
 
 
@@ -27,7 +37,7 @@ const Status = ({explanation, copyright, date,simplified}) => {
       </div>
       <div >        
         <b>{copyright}</b>
-        {simplified?<>{shortenText}<Link to={`${date}`} className="readmore">read more</Link></>:explanation}
+        {simplified?<>{shortenText}<Link to={`/date/${date}`} className="readmore">read more</Link></>:explanation}
       </div>
       <div className="comment"></div>
       <div className="date">

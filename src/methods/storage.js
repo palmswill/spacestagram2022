@@ -4,9 +4,9 @@ let parsedList=JSON.parse(likedList);
 return parsedList || []
 }
 
-const setLikedItem=(date)=>{
+const setLikedItem=(item)=>{
   let likedList=getLikedList();
-  likedList.push({date:date});
+  likedList.push(item);
   let strinfiedList= JSON.stringify(likedList);
   localStorage.setItem("likedList",strinfiedList);
 
