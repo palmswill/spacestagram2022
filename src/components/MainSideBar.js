@@ -19,10 +19,10 @@ const Mainsidebar = () => {
     <>
       <h3>What You Liked</h3>
       <div className="side-card-container">
-        {cards.map((card) => {
+        {cards.map((card,index) => {
           const { date, url } = card;
           return (
-            <div className="side-card">
+            <div className="side-card" key={date+index}>
               <img src={`${url}`} alt={date} />
               <p>{date}</p>
             </div>
