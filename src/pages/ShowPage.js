@@ -22,7 +22,7 @@ const Showpage = () => {
   return (
     <div className="show-page flex">
       <div className="left">
-        <Media src="https://apod.nasa.gov/apod/image/0608/exp1Launch_msfc_c22.jpg"></Media>
+        <Media src={url} type={media_type}></Media>
       </div>
       <div className="right">
         <Username title={title} />

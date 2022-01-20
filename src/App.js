@@ -1,10 +1,10 @@
 import './App.css';
-import MainPanel from './panels/MainPanel';
+import Routing from './Routing';
 
 function App() {
   return (
     <div className="App">
-      <MainPanel/>
+      <Routing/>
     </div>
   );
 }

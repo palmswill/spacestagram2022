@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Image = ({src}) => {
+const Image = ({src,type}) => {
   return (
     <img className="postImage" src={src} alt={src}/>
   );
