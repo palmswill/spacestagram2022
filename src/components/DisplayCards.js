@@ -12,6 +12,10 @@ const Displaycards = () => {
     )
   }, []);
 
+  if (!cards.length){
+    return "Now Loading..."
+  }
+
 
 
   return (

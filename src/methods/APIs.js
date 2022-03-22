@@ -7,6 +7,7 @@ const baseApi = `https://api.nasa.gov/planetary/apod?api_key=${key}`;
 const getRandomPost = () =>
   axios.get(`${baseApi}&count=5`).then((res) => {
     if (res.status === 200) {
+      console.log(res);
       return res.data;
     }
     return [];
